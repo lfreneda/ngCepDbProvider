@@ -19,34 +19,26 @@ Angularjs provider wrapper for [cepdb-js plugin](https://github.com/lfreneda/cep
 - Add angular module as a dependency for your app
 
 ```javascript
-    (function() {
-    'use strict';
-
-    angular.module('app', [
-        'app.core',
-        // .. others modules 
-        'ngCepDb' // <<--------------------
-    ]);
-})();
+angular.module('app', [
+    'app.core',
+    // .. others modules 
+    'ngCepDb' // <<--------------------
+]);
 ```
 
 - cepDb provider will be available to inject into yours app controllers
 ```javascript
-(function () {
-    'use strict';
+angular
+    .module('app')
+    .controller('SampleController', SampleController);
     
-    angular
-        .module('app')
-        .controller('SampleController', SampleController);
-        
-    function SampleController($scope, cepDb) {
-        cepDb.search('05422010', {
-            onSuccess: function(data) {
-                alert(JSON.stringify(data));
-            }
-        });
-    }
-})();   
+function SampleController($scope, cepDb) {
+    cepDb.search('05422010', {
+        onSuccess: function(data) {
+            alert(JSON.stringify(data));
+        }
+    });
+}
 ```
 
 ## API
