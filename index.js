@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    var moduleName = 'cepdb';
+    var moduleName = 'ngCepDb';
     angular.module(moduleName, []);
-    angular.module(moduleName).constant('cepdb', new CepDb());
+    angular.module(moduleName).constant('ngCepDb', new CepDb());
 })();
