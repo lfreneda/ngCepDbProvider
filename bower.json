@@ -1,0 +1,34 @@
+{
+  "name": "ngCepDbProvider",
+  "homepage": "https://github.com/lfreneda/ngCepDbProvider",
+  "authors": [
+    "Luiz Freneda <lfreneda@gmail.com>"
+  ],
+  "description": "Angularjs provider for cepdb",
+  "main": "index.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "angularjs",
+    "ng",
+    "cepdb",
+    "cep",
+    "correios",
+    "codigo",
+    "postal",
+    "provider",
+    "factory"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "cepdb-js": "~1.0.1"
+  }
+}
