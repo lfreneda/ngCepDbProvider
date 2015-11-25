@@ -1,22 +1,22 @@
 # ngCepDbProvider
-Angularjs provider wrapper for [cepdb-js plugin](https://github.com/lfreneda/cepdb-js)
+Angularjs provider wrapper para o [cepdb-js plugin](https://github.com/lfreneda/cepdb-js)
 
-## How to install 
+## Instalação
 
-- Install it with [bower](http://bower.io/)
+- Instale com [bower](http://bower.io/)
 
 ```javascript
     bower install ngCepDb
 ```
 
-- Add a script a tag for `ngCepDbProvider/index.js` and its dependencies `cepdb-js/index.js`
+- Adicione tags scripts para os arquivos `ngCepDbProvider/index.js` e `cepdb-js/index.js` (dependência)
 
 ```html
     <script src="/bower_components/cepdb-js/index.js"></script>
     <script src="/bower_components/ngCepDbProvider/index.js"></script>
 ```
 
-- Add angular module as a dependency for your app
+- Registre o modulo `ngCepDb` como dependência da sua aplicação
 
 ```javascript
 angular.module('app', [
@@ -26,7 +26,7 @@ angular.module('app', [
 ]);
 ```
 
-- cepDb provider will be available to inject into yours app controllers
+- Pronto, agora o cepDb provider pode ser injetado em seus controllers
 ```javascript
 angular
     .module('app')
@@ -43,12 +43,14 @@ function SampleController($scope, cepDb) {
 
 ## API
  
- search( **string** `cep`, **object** `options` )
+search( **string** `cep`, **object** `options` )
  
- * **cep** `cep` - cep to be searched
- * **object** `options` - global upload options
-   * **function** `onSuccess` - callback to be called on success 
-   * **function** `onTimeout` - callback to be called on request timed out 
-   * **int** `timeout` - remove thumbnail versions after sucessful upload (**default**: `10`)
+ * **cep** `cep` - cep que deseja resolver
+ * **object** `options` - objeto de opções para chamada 
+   * **function** `onSuccess` - callback que será invocada em caso de sucesso.
+   * **function** `onTimeout` - callback que será invocada em caso de timeout.
+   * **int** `timeout` - tempo de espera da requisição (em segundos) (**default**: `10`)
+
+
 
 
